@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <title>form</title>
+</head>
+<body>
+    <h1 id=form_title>אחלה טופס</h1>
+    <form>
+        <fieldset>
+         <label for="first_name">שם פרטי</label><br>
+         <input class="text_field" type="text" name="first_name"><br>
+         <label for="last_name">שם משפחה</label><br>
+         <input class="text_field" type="text" name="last_name"><br>
+         <label for="email">אימייל</label><br>
+         <input type="email" name="email"><br>
+         <label for="id">תעודת זהות</label><br>
+         <input type="number" name="id" min="100000000" max="999999999"><br>
+         <label for="gender">מגדר</label><br>
+         <input type="radio" name="gender">
+         <label class="radio" for="gender">זכר</label>
+         <input type="radio" name="gender">
+         <label class="radio" for="gender">נקבה</label>
+         <input type="radio" name="gender">
+         <label class="radio" for="gender">אחר</label><br>
+         <label for="message">הודעה</label><br>
+         <textarea rows="4" cols="50" name="message" required></textarea><br><br>
+         <input id=submit type="submit" value="שלח >>">
+        </fieldset>
+    </form>
+</body>
+</html>
+
