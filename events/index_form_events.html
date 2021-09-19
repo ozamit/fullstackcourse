@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+
+    </header>
+    <main>
+        <div>
+            <h1>My form</h1>
+            <form action="/signup" method="post" id="signup">
+                <fieldset>
+                    <label for="name">Name</label>
+                    <input type="text" name="name" id="field_name">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="field_email">
+                    <label for="phone">Phone</label>
+                    <input type="tel" name="phone" id="field_phone">
+                    <label for="age">Age</label>
+                    <input type="number" name="age" id="field_age" min="1" max="99">
+                    <button type="button" id="sendbtn">SEND</button>
+                </fieldset>
+            </form>
+
+            <div style="display: none;" id="18msg">You are over 18!</div>
+
+        </div>
+        <div>
+            <h2>output:</h2>
+            <h3 id="output_name">Name:</h3>
+            <h3 id="output_email">Email:</h3>
+            <h3 id="output_phone">Phone:</h3>
+            <h3 id="output_age">Age:</h3>
+        </div>
+
+
+    </main>
+    <footer>
+
+    </footer>
+    <script src="script_form_ events.js"></script> 
+</body>
+</html>
