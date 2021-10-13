@@ -13,14 +13,45 @@ header {
     top: 0;
     bottom: 0;
     background-color: #D3E0EA;
-    padding: 15px 400px;
     border-bottom: 1px solid black;
 }
 
-nav {
-    font-size: 1.3rem;
+.desktop-nav {
+    display: none;
+}
+
+#header-line {
+    border: none;
+    background: none;
+    font-size: 20px;
+    margin: 7px;
+}
+
+.mobile-nav {
+    width: 100%; 
+}
+
+.mobile-nav > nav {
     display: flex;
+    flex-direction: column;
     justify-content: space-evenly;
+    padding: 0 20px 10px;
+    font-size: 1.2rem;
+}
+
+nav > i {
+    font-size: 7.5vw;
+    font-weight: 300;
+    margin: 10px 0;
+    height: 40vh;
+}
+
+nav > a {
+    padding-top: 10px;
+}
+
+a {
+    text-decoration: none;
 }
 
 nav a:hover {
@@ -29,7 +60,8 @@ nav a:hover {
 }
 
 p {
-    font-family: 'Rubik', sans-serif;}
+    font-family: 'Rubik', sans-serif;
+}
 
 a {
     text-decoration: none;
@@ -45,25 +77,28 @@ a {
 
 .about {
     display: flex;
-    padding: 2vw 6vw;
     background-color: #276678;
     color: #ffffff;
 }
 
 .about-r {
-    padding-left: 7vw;
+    margin-right: 6vw;
+}
+
+.about-l {
+    display: flex;
+    height: fit-content;
 }
 
 h1 {
     font-size: 2.5rem;
-    margin-top: 0px;
+    margin-top: 5vw;
 }
 
 .smallbox {
     display: flex;
-    justify-content: flex-start;
-    width: 10vw;
-    padding: 5px;
+    justify-content: space-between;
+    margin-top: 12vw;
 }
 
 .smallbox div:hover {
@@ -92,38 +127,53 @@ h1 {
 }
 
 img:first-of-type {
-    width: 350px;
+    width: 20vw;
+    margin-right: -30vw;
+    margin-top: 5vw;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 p:first-of-type {
-    font-size: 1.2rem;
+    font-size: 1.0rem;
 }
 
 .project {
     display: flex;
+    flex-direction: column;
     padding: 4vw 6vw;
     background-color: #B5EAEA;
 }
 
 .project-l {
-    padding: 0vw 5vw 0vw 15vw;
+    padding: 0vw 0vw 0vw 0vw;
+    order: 1;
 }
 
 .project-name {
-    margin-top: 0px;
-    margin-bottom: 5px;
-    font-size: 1.5rem;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
 }
 
 .project-date {
-    font-size: 0.8rem;
-    padding-top: 0.3em;
+    font-size: 1.2rem;
+    margin-bottom: 5vw;
 }
 
-.project-r img {
-    width: 300px;
+.project-img {
+    order: 2;
+    height: 60vw;
+}
+
+.project-img img {
+    width: 85vw;
+    margin: 0 auto;
     border-radius: 10px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.project-p {
+    order: 3;
 }
 
 .form-section {
@@ -159,8 +209,8 @@ input {
 
 textarea {
     margin-top: 20px;
-    width: 30vw;
-    height: 10vw;
+    width: 80vw;
+    height: 30vw;
 }
 
 .submit {
@@ -188,7 +238,7 @@ footer .copyright {
 .whatsapp {
     position: fixed;
     left: 0;
-    top: 38vw;
+    top: 80vh;
     width: 45px;
     height: 40px;
     border-top-right-radius: 50%;
@@ -216,6 +266,103 @@ footer .copyright {
     font-size: 40px;
     color: #ffffff;
     bottom: 20px;
-    right: 30px
+    right: 30px;
 }
 
+
+/*beginning of desktop version*/
+
+@media only screen and ( min-width: 1024px ) {
+
+    header {
+        position: sticky;
+        top: 0;
+        bottom: 0;
+        background-color: #D3E0EA;
+        border-bottom: 1px solid black;
+    }
+
+    .mobile-nav {
+        display: none;
+    }
+    
+    .desktop-nav {
+        display: flex;
+        justify-content: space-evenly;
+        padding: 10px 300px;
+        font-size: 1.0rem;
+    }
+
+    nav a {
+        margin: 0 30px;
+    }
+    
+    nav a:hover {
+        opacity: 0.7;
+        text-decoration: underline;
+    }
+
+    p:first-of-type {
+        width: 55vw;
+        font-size: 1.3rem;
+        margin-bottom: 15vh;
+    }
+
+    img:first-of-type {
+        margin-right: 8vw;
+    }
+    
+    .smallbox {
+        justify-content: flex-start;
+        font-weight: bold;
+        margin-top: 0;
+    }
+
+    .contact i {
+        font-size: 1.2rem;
+    }
+
+    .contact a {
+        font-size: 1.2rem;
+    }
+
+    .project {
+        flex-direction: row;
+    }
+
+    .project-img {
+        order: 0;
+        height: auto;
+    }
+
+    .project-img img {
+        width: 25vw;
+        margin-right: 0;
+    }
+
+    .project-l {
+        margin-right: 3vw;
+        order: 0;
+    }
+
+    .project-p {
+        order: 0;
+        margin: 80px -15vw 100px 0px;
+    }
+
+    .project-name-and-date {
+        width: 15vw;
+    }
+
+    .project-name {
+        margin-top: 0;
+    }
+    
+    textarea {
+        width: 45vw;
+        height: 10vw;
+    }
+
+
+    
+}
