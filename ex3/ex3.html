@@ -14,14 +14,25 @@
     <link href="style3.css" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <script src="https://kit.fontawesome.com/03dbf061b9.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 <body>
     <header>
-        <nav>
-            <a href="#about-id">אודותי</a>
-            <a href="#project-id">העבודות שלי</a>
-            <a href="#form-section-id">צור קשר</a>
-        </nav>
+        <div class="mobile-nav">
+            <button type="button" id="header-line"><i class="fas fa-bars"></i></button> 
+            <nav id="mobile-nav">
+                <a href="#about-id">אודותי</a>
+                <a href="#project-id">העבודות שלי</a>
+                <a href="#form-section-id">צור קשר</a>
+            </nav>
+        </div>
+        <div class="desktop-nav">
+            <nav>
+                <a href="#about-id">אודותי</a>
+                <a href="#project-id">העבודות שלי</a>
+                <a href="#form-section-id">צור קשר</a>
+            </nav>
+        </div>
     </header>
     <main>
         <!--beginning of about sectoin-->
@@ -31,7 +42,6 @@
                     <h1>עמית עוז</h1>
                 </div>
                 <div class="smallbox">
-                    <div>text</div>
                     <div>text</div>
                     <div>text</div>
                     <div>text</div>
@@ -59,48 +69,28 @@
                 </div>
             </div>
             <div class="about-l">
-                <img src="/../fullstack/images/image (1).png" alt="mypic">
+                <img src="profilepic.jpg" alt="mypic">
             </div>
         </section>
         <!--beginning of projects sectoin-->
         <section id="project-id">
             <div class="project">
-                <div class="project-r">
-                    <img src="/../fullstack/images/project.png" alt="first project pic">
+                <div class="project-img">
+                    <img src="project.png" alt="first project pic">
                 </div>
                 <div class="project-l">
-                    <h2 class="project-name">שם הפרוייקט</h2>
-                    <div class="project-date">ינואר 2021</div>
-                    <p>
-                     תיאור של הפרוייקט תיאור של הפרוייקט תיאור של הפרוייקט תיאור של הפרוייקט 
-                     תיאור של הפרוייקט תיאור של הפרוייקט תיאור של הפרוייקט תיאור של הפרוייקט 
-                     תיאור של הפרוייקט תיאור של הפרוייקט תיאור של הפרוייקט תיאור של הפרוייקט 
-                     תיאור של הפרוייקט תיאור של הפרוייקט תיאור של הפרוייקט תיאור של הפרוייקט
-                     תיאור של הפרוייקט תיאור של הפרוייקט תיאור של הפרוייקט תיאור של הפרוייקט 
-                     תיאור של הפרוייקט תיאור של הפרוייקט תיאור של הפרוייקט תיאור של הפרוייקט 
-                     תיאור של הפרוייקט תיאור של הפרוייקט תיאור של הפרוייקט תיאור של הפרוייקט 
-                     תיאור של הפרוייקט תיאור של הפרוייקט תיאור של הפרוייקט תיאור של הפרוייקט 
-                     תיאור של הפרוייקט תיאור של הפרוייקט תיאור של הפרוייקט תיאור של הפרוייקט
-                    </p>
+                    <div class="project-name-and-date">
+                        <h2 class="project-name">שם הפרוייקט</h2>
+                        <div class="project-date">ינואר 2021</div>
+                    </div>
                 </div>
-            </div>
-            <div class="project">
-                <div class="project-r">
-                    <img src="/../fullstack/images/project.png" alt="first project pic">
-                </div>
-                <div class="project-l">
-                    <h2 class="project-name">שם הפרוייקט</h2>
-                    <div class="project-date">ינואר 2021</div>
+                <div class="project-p">
                     <p>
-                     תיאור של הפרוייקט תיאור של הפרוייקט תיאור של הפרוייקט תיאור של הפרוייקט 
-                     תיאור של הפרוייקט תיאור של הפרוייקט תיאור של הפרוייקט תיאור של הפרוייקט 
-                     תיאור של הפרוייקט תיאור של הפרוייקט תיאור של הפרוייקט תיאור של הפרוייקט 
-                     תיאור של הפרוייקט תיאור של הפרוייקט תיאור של הפרוייקט תיאור של הפרוייקט
-                     תיאור של הפרוייקט תיאור של הפרוייקט תיאור של הפרוייקט תיאור של הפרוייקט 
-                     תיאור של הפרוייקט תיאור של הפרוייקט תיאור של הפרוייקט תיאור של הפרוייקט 
-                     תיאור של הפרוייקט תיאור של הפרוייקט תיאור של הפרוייקט תיאור של הפרוייקט 
-                     תיאור של הפרוייקט תיאור של הפרוייקט תיאור של הפרוייקט תיאור של הפרוייקט 
-                     תיאור של הפרוייקט תיאור של הפרוייקט תיאור של הפרוייקט תיאור של הפרוייקט
+                        פה אני הולך לכתוב תיאור של הפרוייקט,
+                        לא תיאור חופר מידי אבל כן כזה שיהיה מעניין ויהיה בו מספיק תוכן רלוונטי.
+                        זו הזדמנות לספר על הפרוייקט הזה שעבדתי עליו קשה מאוד ואני גאה בו.
+                        מזכיר לעצמי גם לספר שעשיתי אותו עם שותפים נהדרים שהעבודה על הפרוייקט הזה הייתה מאתגרת אבל נהניתי בכל רגע,
+                        אני חושב שגולשים יאבהו לקרוא את זה..
                     </p>
                 </div>
             </div>
